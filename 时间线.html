@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件时间线</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2.5rem;
+        }
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 1.25rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #e9ecef;
+            transform: translateX(-50%);
+        }
+        .timeline-dot {
+            position: absolute;
+            left: 1.25rem;
+            top: 0.25rem;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 9999px;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+        .dot-our { background-color: #f97316; } /* 橙色代表我方 */
+        .dot-their { background-color: #3b82f6; } /* 蓝色代表对方 */
+        .dot-neutral { background-color: #6b7280; } /* 灰色代表中立/背景 */
+        .evidence-img {
+            margin-top: 0.75rem;
+            border-radius: 0.5rem;
+            border: 1px solid #e5e7eb;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div class="container mx-auto p-4 max-w-2xl">
+        <div class="text-center mb-8">
+            <h1 class="text-2xl font-bold text-gray-800">关于近期比赛风波的时间线梳理</h1>
+            <p class="text-sm text-gray-500 mt-2">清者自清，事实胜于雄辩</p>
+        </div>
+
+        <div class="relative">
+            <!-- Central Line -->
+            <div class="timeline-line"></div>
+
+            <!-- Timeline Item: 长期背景 -->
+            <div class="timeline-item">
+                <div class="timeline-dot dot-their"></div>
+                <div class="pl-10">
+                    <p class="text-sm text-gray-500">长期背景</p>
+                    <h3 class="font-bold text-lg text-blue-600">蓄意攻击：建立黑超 & 持续抹黑</h3>
+                    <p class="mt-1 text-gray-700">对方粉丝长期建立并维护针对虎杖悠仁的侮辱性黑超话，并持续发布P图、黑称等攻击性内容。</p>
+                    <!-- Image Evidence: Replace the src with your image URL -->
+                    <img src="https://placehold.co/600x300/e2e8f0/4a5568?text=在此处粘贴黑超证据图链接" alt="建立黑超的证据" class="evidence-img">
+                </div>
+            </div>
+            
+            <!-- Timeline Item: 7月14日 -->
+            <div class="timeline-item">
+                <div class="timeline-dot dot-their"></div>
+                <div class="pl-10">
+                    <p class="text-sm text-gray-500">7月14日-16日</p>
+                    <h3 class="font-bold text-lg text-blue-600">赛前预热：带大名刷黑图</h3>
+                    <p class="mt-1 text-gray-700">比赛前夕，对方粉丝已开始在微博等平台带虎杖悠仁大名，公然发布侮辱性图片，主动挑起争端。</p>
+                    <!-- Image Evidence: Replace the src with your image URL -->
+                    <img src="https://placehold.co/600x400/e2e8f0/4a5568?text=在此处粘贴刷黑图证据链接" alt="赛前刷黑图的证据" class="evidence-img">
+                </div>
+            </div>
+
+            <!-- Timeline Item: 7月17日 中午 -->
+            <div class="timeline-item">
+                <div class="timeline-dot dot-their"></div>
+                <div class="pl-10">
+                    <p class="text-sm text-gray-500">7月17日 11:20 - 12:30</p>
+                    <h3 class="font-bold text-lg text-blue-600">打破平衡：率先下场“买票”</h3>
+                    <p class="mt-1 text-gray-700">比赛当天，夏油杰方票数开始出现多次非正常、断崖式的增长。增票曲线出现不自然的“尖峰”，率先采用不正当手段破坏比赛公平。</p>
+                     <!-- Image Evidence: Replace the src with your image URL -->
+                    <img src="https://placehold.co/600x300/e2e8f0/4a5568?text=在此处粘贴增票曲线图链接" alt="对方率先买票的增票曲线图" class="evidence-img">
+                    
+                    <!-- Bilibili Video Link -->
+                    <div class="mt-4">
+                        <a href="https://www.bilibili.com/video/BV1EPgTzFErY/?p=2" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold transition-colors duration-200">
+                            增票数据可视化（点击跳转B站）
+                            <svg class="w-4 h-4 inline-block ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item: 7月17日 下午 -->
+            <div class="timeline-item">
+                <div class="timeline-dot dot-our"></div>
+                <div class="pl-10">
+                    <p class="text-sm text-gray-500">7月17日 傍晚</p>
+                    <h3 class="font-bold text-lg text-orange-600">无奈应战：为晋级被迫反击</h3>
+                    <p class="mt-1 text-gray-700">在“八进二”的残酷赛制下，面对对方率先破坏规则、我方面临淘汰的局面，我们为保证晋级，被迫下场做出回应。</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item: 赛后 -->
+            <div class="timeline-item">
+                <div class="timeline-dot dot-their"></div>
+                <div class="pl-10">
+                    <p class="text-sm text-gray-500">比赛结束后</p>
+                    <h3 class="font-bold text-lg text-blue-600">颠倒黑白：输后反咬 & 卖惨虐粉</h3>
+                    <p class="mt-1 text-gray-700">在己方获胜后，对方立刻开始在全平台散播“虎杖粉先动手”、“虎杖粉藏票”等不实言论，将己方行为甩锅给我方，并以此为剧本进行“虐粉”操作。</p>
+                    <!-- Image Evidence: Replace the src with your image URL -->
+                    <img src="https://placehold.co/600x500/e2e8f0/4a5568?text=在此处粘贴对方反咬证据链接" alt="对方输后反咬的证据" class="evidence-img">
+                    <img src="https://placehold.co/600x200/e2e8f0/4a5568?text=在此处粘贴对方卖惨证据链接" alt="对方卖惨虐粉的证据" class="evidence-img mt-2">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
